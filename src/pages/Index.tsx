@@ -59,12 +59,12 @@ const Index = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mb-8"
+          className="text-center mb-6 sm:mb-8 mt-16 sm:mt-0 px-2"
         >
-          <h1 className="font-display text-4xl md:text-6xl text-foreground mb-3">
+          <h1 className="font-display text-2xl sm:text-4xl md:text-6xl text-foreground mb-2 sm:mb-3">
             <span className="text-gradient-blue">{t.titleHighlight}</span> {t.title}
           </h1>
-          <p className="font-body text-muted-foreground text-lg">
+          <p className="font-body text-muted-foreground text-sm sm:text-lg">
             {t.subtitle}
           </p>
         </motion.div>
