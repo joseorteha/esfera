@@ -10,7 +10,7 @@ const LanguageToggle: React.FC = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="fixed top-6 right-6 z-50 flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-2 border border-border"
+      className="fixed top-4 right-4 z-50 flex items-center gap-1 sm:gap-2 bg-card/80 backdrop-blur-sm rounded-full px-2 sm:px-4 py-1.5 sm:py-2 border border-border"
     >
       <button
         onClick={() => setLanguage('en')}
