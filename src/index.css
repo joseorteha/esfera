@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  [data-theme="blue"] {
+    /* Cool Blue Palette */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 200 80% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 260 60% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 210 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --sphere-glow: 210 100% 65%;
+    --sphere-core: 220 90% 55%;
+    --accent-purple: 260 60% 55%;
+    --accent-cyan: 185 80% 50%;
+    --snow-white: 210 40% 98%;
+    --warm-glow: 200 90% 60%;
+    
+    /* Gradients */
+    --gradient-sphere-glow: radial-gradient(circle, hsl(210 100% 65% / 0.3) 0%, hsl(260 60% 55% / 0.2) 50%, transparent 70%);
+    --gradient-background: radial-gradient(ellipse at center, hsl(220 30% 15%) 0%, hsl(220 25% 6%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(210 100% 60% / 0.3);
+    --shadow-photo: 0 10px 40px hsl(0 0% 0% / 0.5);
+
+    /* Sidebar - keeping defaults */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  [data-theme="red"] {
+    /* Christmas Red Palette */
+    --background: 0 20% 8%;
+    --foreground: 0 20% 98%;
+
+    --card: 0 20% 12%;
+    --card-foreground: 0 20% 98%;
+
+    --popover: 0 20% 10%;
+    --popover-foreground: 0 20% 98%;
+
+    --primary: 0 85% 55%;
+    --primary-foreground: 0 20% 98%;
+
+    --secondary: 35 90% 50%;
+    --secondary-foreground: 0 20% 8%;
+
+    --muted: 0 15% 20%;
+    --muted-foreground: 0 15% 65%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 0 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 20% 98%;
+
+    --border: 0 20% 18%;
+    --input: 0 20% 18%;
+    --ring: 0 85% 55%;
+
+    /* Custom tokens */
+    --sphere-glow: 0 90% 60%;
+    --sphere-core: 0 80% 50%;
+    --accent-purple: 35 90% 55%;
+    --accent-cyan: 35 80% 50%;
+    --snow-white: 0 20% 98%;
+    --warm-glow: 35 90% 60%;
+    
+    /* Gradients */
+    --gradient-sphere-glow: radial-gradient(circle, hsl(0 90% 60% / 0.3) 0%, hsl(35 90% 55% / 0.2) 50%, transparent 70%);
+    --gradient-background: radial-gradient(ellipse at center, hsl(0 25% 15%) 0%, hsl(0 20% 6%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(0 85% 55% / 0.3);
+    --shadow-photo: 0 10px 40px hsl(0 0% 0% / 0.5);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 0 85% 55%;
+  }
+
+  [data-theme="green"] {
+    /* Forest Green Palette */
+    --background: 150 25% 7%;
+    --foreground: 150 30% 98%;
+
+    --card: 150 25% 11%;
+    --card-foreground: 150 30% 98%;
+
+    --popover: 150 25% 9%;
+    --popover-foreground: 150 30% 98%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 150 25% 7%;
+
+    --secondary: 160 80% 40%;
+    --secondary-foreground: 150 30% 98%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 150 15% 60%;
+
+    --accent: 160 70% 45%;
+    --accent-foreground: 150 25% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 150 30% 98%;
+
+    --border: 150 20% 16%;
+    --input: 150 20% 16%;
+    --ring: 142 70% 45%;
+
+    /* Custom tokens */
+    --sphere-glow: 142 80% 50%;
+    --sphere-core: 150 70% 40%;
+    --accent-purple: 160 70% 45%;
+    --accent-cyan: 165 80% 45%;
+    --snow-white: 150 30% 98%;
+    --warm-glow: 142 80% 55%;
+    
+    /* Gradients */
+    --gradient-sphere-glow: radial-gradient(circle, hsl(142 80% 50% / 0.3) 0%, hsl(160 70% 45% / 0.2) 50%, transparent 70%);
+    --gradient-background: radial-gradient(ellipse at center, hsl(150 30% 14%) 0%, hsl(150 25% 5%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(142 70% 45% / 0.3);
+    --shadow-photo: 0 10px 40px hsl(0 0% 0% / 0.5);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 142 70% 45%;
+  }
+
+  .dark {
+    --background: 220 25% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 200 80% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 210 20% 60%;
+
+    --accent: 260 60% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 16%;
+    --input: 220 20% 16%;
+    --ring: 210 100% 60%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .sphere-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .photo-frame {
+    @apply rounded-lg overflow-hidden;
+    box-shadow: var(--shadow-photo);
+    border: 2px solid hsl(var(--sphere-glow) / 0.3);
+  }
+
+  .floating-photo {
+    @apply transition-all duration-500 ease-out cursor-pointer;
+    filter: drop-shadow(0 0 20px hsl(var(--sphere-glow) / 0.2));
+  }
+
+  .floating-photo:hover {
+    filter: drop-shadow(0 0 30px hsl(var(--sphere-glow) / 0.5));
+    transform: scale(1.1) translateZ(20px);
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent-cyan)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-main-gradient {
+    background: var(--gradient-background);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.4);
+  }
+
+  .glow-sphere {
+    box-shadow: 0 0 40px hsl(var(--sphere-glow) / 0.5);
+  }
+}
+
+/* Snow animation */
+@keyframes snow-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+}
+
+.animate-snow {
+  animation: snow-fall linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit linear infinite;
+}
